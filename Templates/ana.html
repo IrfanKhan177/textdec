@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="" content="">
+    <title>{{ param.hed }}</title>
+    <style type="text/css" media="all">
+      .ana{
+        background-color: #aad9e4;
+        border-radius: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      #sample{
+        text-align: center;
+        
+        
+      }
+      button{
+        padding: 5px;
+        border-radius: 3px;
+        border: none;
+      }
+      a{
+        color: black;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Your analyzed text {{ param.title }}</h1>
+    <p class="ana" id="sample"><b>{{ param.antext }}</b></p>
+  <button> <a href="/analyzed" onclick="CopyToClipboard('sample');return false;">Copy Text</a></button>
+    
+  <script>
+function CopyToClipboard(id)
+{
+var r = document.createRange();
+r.selectNode(document.getElementById(id));
+window.getSelection().removeAllRanges();
+window.getSelection().addRange(r);
+document.execCommand('copy');
+window.getSelection().removeAllRanges();
+}
+</script>
+  </body>
+</html>
