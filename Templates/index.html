@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="" content="">
+    <title>{{ param.title }}</title>
+    <style type="text/css" media="all">
+    body{
+      margin: 0;
+      padding: 0;
+    }
+      .h{
+        text-align: center;
+        font-family: Arial Sans-Serif;
+        color: pink;
+      }
+      textarea{
+        border: none;
+        background-color: #d5e1e4;
+        border-radius: 10px;
+        outline-color: #8aade1;
+        color: black;
+        font-size: 20px;
+        font-style: bold;
+      }
+      form{
+        display:flex;
+        flex-direction:column ;
+        justify-content: center;
+        margin: 20px;
+      }
+      .wh{
+        font-family: Arial;
+      }
+      .bt , .bt1{
+        padding: 10px;
+        margin-left: 90px;
+        margin-right: 90px;
+        border-radius: 10px;
+      }
+      .bt1{
+        background-color: gray;
+        border: none;
+        margin-top: 20px;
+        
+      }
+      .bt{
+        border: none;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wh">
+      <h1 class="h">Welcome to our TextDec</h1>
+    <form action="/analyzed" method="get" accept-charset="utf-8">
+      <textarea name="text"  rows="8" cols="40"></textarea><br />
+      <div>
+      <input type="checkbox" name="rem" id="" /> Remove Punctuation
+      
+      </div>
+      <button class="bt" type="submit">Analyze</button>
+      <button class="bt1" type="reset">Reset</button>
+    </form>
+    </div>
+  </body>
+</html>
