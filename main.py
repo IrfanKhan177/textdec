@@ -26,4 +26,5 @@ def analyzed():
   else:
     return "Choose any option."
     
-app.run(debug=False)
+if __name__=="__main__":
+    app.run()
